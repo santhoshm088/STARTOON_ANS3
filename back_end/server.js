@@ -8,8 +8,20 @@ import path from 'path';
 import core from 'cors';
 dotenv.config();
 
+// mongoose
+//   .connect("mongodb://127.0.0.1:27017/cons")
+//   .then(() => {
+//     console.log('Connected to db');
+//   })
+//   .catch((err) => {
+//     console.log("jkj")
+//     console.log(err);
+//   });
+
+
+
 mongoose
-  .connect("mongodb://127.0.0.1:27017/cons")
+  .connect("mongodb+srv://santhoshdhana88:dhivash88@cluster0.vkal3sl.mongodb.net/")
   .then(() => {
     console.log('Connected to db');
   })
