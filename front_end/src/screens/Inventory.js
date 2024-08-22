@@ -21,7 +21,7 @@ function Inventory() {
 
   // Fetching Data of All Products
   const fetchProductsData = () => {
-    fetch(`http://localhost:5000/api/product/get/`)
+    fetch(`https://cons-backend-1.onrender.com/api/product/get/`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -38,7 +38,7 @@ function Inventory() {
 
   // Fetching Data of Search Products
   const fetchSearchData = () => {
-    fetch(`http://localhost:5000/api/product/search?searchTerm=${searchTerm}`)
+    fetch(`https://cons-backend-1.onrender.com/api/product/search?searchTerm=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
@@ -49,7 +49,7 @@ function Inventory() {
   // Fetching all stores data
   const fetchSalesData = () => {
   
-    fetch(`http://localhost:5000/api/store/get/}`)
+    fetch(`https://cons-backend-1.onrender.com/api/store/get/}`)
       .then((response) => response.json())
       .then((data) => {
         setAllStores(data);
@@ -73,8 +73,8 @@ function Inventory() {
   // Delete item
   const deleteItem = (id) => {
     console.log("Product ID: ", id);
-    console.log(`http://localhost:5000/api/product/delete/${id}`);
-    fetch(`http://localhost:5000/api/product/delete/${id}`)
+    console.log(`https://cons-backend-1.onrender.com/api/product/delete/${id}`);
+    fetch(`https://cons-backend-1.onrender.com/api/product/delete/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setUpdatePage(!updatePage);

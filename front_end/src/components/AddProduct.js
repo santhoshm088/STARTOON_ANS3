@@ -30,7 +30,7 @@ export default function AddProduct({
     window.alert("kk");
 
     
-    fetch("/api/product/add", {
+    fetch("https://cons-backend-1.onrender.com/api/product/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -172,7 +172,7 @@ export default function AddProduct({
                               type="text"
                               name="availibility"
                               id="availibility"
-                              value={(product.stock>0) ? product.availibility="Stock" : product.availibility= "Not in Stock"}
+                              value={(product.stock>0) ? product.availibility="Available" : product.availibility= "Not Available"}
                               onChange={(e) =>
                                 handleInputChange(e.target.name, e.target.value)
                               }
